@@ -98,8 +98,7 @@ export function Footer() {
 
             <div className="mt-6 text-sm text-white/60 space-y-1">
               <p>{COMPANY.hours.weekdays}</p>
-              <p>{COMPANY.hours.saturday}</p>
-              <p>{COMPANY.hours.sunday}</p>
+              <p>{COMPANY.hours.emergency}</p>
             </div>
           </div>
         </div>

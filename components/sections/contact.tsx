@@ -115,8 +115,7 @@ export function Contact() {
                   <h3 className="font-semibold text-text">Hours</h3>
                   <div className="text-text-muted text-sm mt-1 space-y-0.5">
                     <p>{COMPANY.hours.weekdays}</p>
-                    <p>{COMPANY.hours.saturday}</p>
-                    <p>{COMPANY.hours.sunday}</p>
+                    <p>{COMPANY.hours.emergency}</p>
                   </div>
                 </div>
               </div>

@@ -26,8 +26,7 @@ export const COMPANY = {
   },
   hours: {
     weekdays: "Mon\u2013Fri: 8:00 AM \u2013 6:00 PM",
-    saturday: "24/7 Emergency Plumbing",
-    sunday: "24/7 Emergency Plumbing",
+    emergency: "24/7 Emergency Plumbing",
   },
   social: {
     facebook: "https://www.facebook.com/people/TriCraft-Handyman-Services-LLC/100083411621322/",

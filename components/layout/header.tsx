@@ -41,9 +41,9 @@ export function Header() {
             <Image
               src={scrolled ? "/images/logos/logo-color.png" : "/images/logos/logo-white.png"}
               alt="TriCraft Handyman Services"
-              width={140}
-              height={48}
-              className="h-10 w-auto lg:h-12"
+              width={200}
+              height={64}
+              className="h-14 w-auto lg:h-16"
               priority
             />
           </a>
@@ -119,9 +119,9 @@ export function Header() {
                 <Image
                   src="/images/logos/logo-color.png"
                   alt="TriCraft Handyman Services"
-                  width={140}
-                  height={48}
-                  className="h-10 w-auto"
+                  width={200}
+                  height={64}
+                  className="h-14 w-auto"
                 />
                 <button
                   onClick={() => setMobileOpen(false)}

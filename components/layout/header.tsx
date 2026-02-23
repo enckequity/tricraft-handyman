@@ -32,8 +32,8 @@ export function Header() {
       <header
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
           scrolled
-            ? "bg-white/95 backdrop-blur-md shadow-sm py-3"
-            : "bg-primary-dark/80 backdrop-blur-sm py-4"
+            ? "bg-white/95 backdrop-blur-md shadow-sm py-2"
+            : "bg-primary-dark/80 backdrop-blur-sm py-3"
         }`}
       >
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex items-center justify-between">
@@ -41,9 +41,9 @@ export function Header() {
             <Image
               src={scrolled ? "/images/logos/logo-color.png" : "/images/logos/logo-white.png"}
               alt="TriCraft Handyman Services"
-              width={200}
-              height={64}
-              className="h-14 w-auto lg:h-16"
+              width={280}
+              height={96}
+              className="h-20 w-auto lg:h-24"
               priority
             />
           </a>
@@ -119,9 +119,9 @@ export function Header() {
                 <Image
                   src="/images/logos/logo-color.png"
                   alt="TriCraft Handyman Services"
-                  width={200}
-                  height={64}
-                  className="h-14 w-auto"
+                  width={280}
+                  height={96}
+                  className="h-20 w-auto"
                 />
                 <button
                   onClick={() => setMobileOpen(false)}

@@ -37,8 +37,8 @@ export function Header() {
         }`}
       >
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex items-center justify-between">
-          <a href="#" className="flex items-center gap-2.5 shrink-0">
-            <div className="relative w-10 h-10 lg:w-12 lg:h-12 overflow-hidden shrink-0">
+          <a href="#" className="flex items-center gap-3 shrink-0">
+            <div className="relative w-12 h-12 lg:w-14 lg:h-14 overflow-hidden shrink-0">
               <Image
                 src={scrolled ? "/images/logos/logo-color.png" : "/images/logos/logo-white.png"}
                 alt=""
@@ -49,13 +49,13 @@ export function Header() {
               />
             </div>
             <div className="flex flex-col leading-none">
-              <span className={`text-xl lg:text-2xl font-bold tracking-tight font-[family-name:var(--font-heading)] transition-colors ${
+              <span className={`text-2xl lg:text-3xl font-bold tracking-tight font-[family-name:var(--font-heading)] transition-colors ${
                 scrolled ? "text-primary" : "text-white"
               }`}>
                 TriCraft
               </span>
-              <span className={`text-[9px] lg:text-[10px] font-bold tracking-[0.2em] uppercase mt-0.5 transition-colors ${
-                scrolled ? "text-text-muted" : "text-white/50"
+              <span className={`text-[10px] lg:text-xs font-bold tracking-[0.15em] uppercase mt-0.5 transition-colors ${
+                scrolled ? "text-text-muted" : "text-white/60"
               }`}>
                 Handyman Services
               </span>
@@ -130,8 +130,8 @@ export function Header() {
           >
             <div className="flex flex-col h-full">
               <div className="flex items-center justify-between px-4 py-4 border-b border-border">
-                <div className="flex items-center gap-2.5">
-                  <div className="relative w-11 h-11 overflow-hidden shrink-0">
+                <div className="flex items-center gap-3">
+                  <div className="relative w-12 h-12 overflow-hidden shrink-0">
                     <Image
                       src="/images/logos/logo-color.png"
                       alt=""
@@ -141,10 +141,10 @@ export function Header() {
                     />
                   </div>
                   <div className="flex flex-col leading-none">
-                    <span className="text-xl font-bold tracking-tight font-[family-name:var(--font-heading)] text-primary">
+                    <span className="text-2xl font-bold tracking-tight font-[family-name:var(--font-heading)] text-primary">
                       TriCraft
                     </span>
-                    <span className="text-[9px] font-bold tracking-[0.2em] uppercase mt-0.5 text-text-muted">
+                    <span className="text-[10px] font-bold tracking-[0.15em] uppercase mt-0.5 text-text-muted">
                       Handyman Services
                     </span>
                   </div>

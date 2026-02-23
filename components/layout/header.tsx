@@ -37,15 +37,29 @@ export function Header() {
         }`}
       >
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex items-center justify-between">
-          <a href="#" className="flex items-center shrink-0">
-            <Image
-              src={scrolled ? "/images/logos/logo-color.png" : "/images/logos/logo-white.png"}
-              alt="TriCraft Handyman Services"
-              width={400}
-              height={400}
-              className="h-16 w-auto sm:h-20 lg:h-24"
-              priority
-            />
+          <a href="#" className="flex items-center gap-2.5 shrink-0">
+            <div className="relative w-10 h-10 lg:w-12 lg:h-12 overflow-hidden shrink-0">
+              <Image
+                src={scrolled ? "/images/logos/logo-color.png" : "/images/logos/logo-white.png"}
+                alt=""
+                width={400}
+                height={400}
+                className="absolute top-[2%] left-1/2 -translate-x-1/2 w-[140%] max-w-none"
+                priority
+              />
+            </div>
+            <div className="flex flex-col leading-none">
+              <span className={`text-xl lg:text-2xl font-bold tracking-tight font-[family-name:var(--font-heading)] transition-colors ${
+                scrolled ? "text-primary" : "text-white"
+              }`}>
+                TriCraft
+              </span>
+              <span className={`text-[9px] lg:text-[10px] font-bold tracking-[0.2em] uppercase mt-0.5 transition-colors ${
+                scrolled ? "text-text-muted" : "text-white/50"
+              }`}>
+                Handyman Services
+              </span>
+            </div>
           </a>
 
           <nav className="hidden lg:flex items-center gap-8">
@@ -116,13 +130,25 @@ export function Header() {
           >
             <div className="flex flex-col h-full">
               <div className="flex items-center justify-between px-4 py-4 border-b border-border">
-                <Image
-                  src="/images/logos/logo-color.png"
-                  alt="TriCraft Handyman Services"
-                  width={400}
-                  height={400}
-                  className="h-20 w-auto"
-                />
+                <div className="flex items-center gap-2.5">
+                  <div className="relative w-11 h-11 overflow-hidden shrink-0">
+                    <Image
+                      src="/images/logos/logo-color.png"
+                      alt=""
+                      width={400}
+                      height={400}
+                      className="absolute top-[2%] left-1/2 -translate-x-1/2 w-[140%] max-w-none"
+                    />
+                  </div>
+                  <div className="flex flex-col leading-none">
+                    <span className="text-xl font-bold tracking-tight font-[family-name:var(--font-heading)] text-primary">
+                      TriCraft
+                    </span>
+                    <span className="text-[9px] font-bold tracking-[0.2em] uppercase mt-0.5 text-text-muted">
+                      Handyman Services
+                    </span>
+                  </div>
+                </div>
                 <button
                   onClick={() => setMobileOpen(false)}
                   className="p-2 rounded-lg text-text hover:bg-gray-100 transition-colors"

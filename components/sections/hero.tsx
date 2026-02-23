@@ -24,6 +24,22 @@ export function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: "easeOut" }}
+            className="mb-8"
+          >
+            <Image
+              src="/images/logos/logo-white.png"
+              alt="TriCraft Handyman Services LLC"
+              width={400}
+              height={400}
+              className="h-32 sm:h-40 lg:h-48 w-auto"
+              priority
+            />
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.05, ease: "easeOut" }}
           >
             <span className="inline-flex items-center px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-white/90 text-sm font-medium mb-6">
               Serving Ephrata &amp; All of Lancaster County

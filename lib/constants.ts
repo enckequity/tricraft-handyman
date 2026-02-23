@@ -104,51 +104,6 @@ export const SERVICES: Service[] = [
   },
 ]
 
-export interface Testimonial {
-  quote: string
-  name: string
-  location: string
-  service: string
-}
-
-export const TESTIMONIALS: Testimonial[] = [
-  {
-    quote:
-      "Had a leaky faucet and two outlets that stopped working. He fixed everything in one visit and the price was exactly what he quoted. Really glad I didn\u2019t have to call three different guys.",
-    name: "Sarah K.",
-    location: "Ephrata, PA",
-    service: "Plumbing & Electrical",
-  },
-  {
-    quote:
-      "They replaced our front door and it looks incredible. Showed up on time, cleaned up after, and the door fits perfectly. Neighbors keep asking who did the work.",
-    name: "Mike R.",
-    location: "Lititz, PA",
-    service: "Door Installation",
-  },
-  {
-    quote:
-      "I manage six rental units and TriCraft handles all my maintenance calls now. Plumbing, electrical, drywall patches \u2014 they do it all and I only deal with one company. Saves me so much time.",
-    name: "Jennifer T.",
-    location: "Lancaster, PA",
-    service: "Property Maintenance",
-  },
-  {
-    quote:
-      "Our basement had water damage and needed new drywall, flooring, and some electrical work. They handled the whole project start to finish. Looked like a brand new room when they were done.",
-    name: "Dave M.",
-    location: "New Holland, PA",
-    service: "Full Renovation",
-  },
-  {
-    quote:
-      "Needed a ceiling fan installed and some shelves built in our living room. Quick, clean work. No mess, no runaround on pricing. Will definitely call again.",
-    name: "Lisa W.",
-    location: "Akron, PA",
-    service: "Electrical & Carpentry",
-  },
-]
-
 export interface GalleryImage {
   src: string
   alt: string

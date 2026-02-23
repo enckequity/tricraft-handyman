@@ -30,7 +30,7 @@ export function About() {
                 />
               </div>
               <div className="absolute -bottom-6 -right-6 bg-primary text-white p-6 rounded-xl shadow-xl hidden sm:block">
-                <div className="text-3xl font-bold">5+</div>
+                <div className="text-3xl font-bold">{new Date().getFullYear() - 2020}+</div>
                 <div className="text-sm text-white/80">Years Serving<br />Lancaster County</div>
               </div>
             </div>

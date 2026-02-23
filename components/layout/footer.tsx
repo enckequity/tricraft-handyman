@@ -114,6 +114,17 @@ export function Footer() {
           <p className="text-sm text-white/40">
             Licensed &amp; Insured &middot; Ephrata, PA
           </p>
+          <p className="text-sm text-white/30">
+            Built by{" "}
+            <a
+              href="https://enckeg.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white/40 hover:text-white/60 transition-colors"
+            >
+              enckeg.com
+            </a>
+          </p>
         </div>
       </div>
     </footer>

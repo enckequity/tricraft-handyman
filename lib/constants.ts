@@ -32,11 +32,11 @@ export const COMPANY = {
   social: {
     facebook: "https://www.facebook.com/people/TriCraft-Handyman-Services-LLC/100083411621322/",
     instagram: "https://www.instagram.com/tricraft_handyman_llc/",
-    google: "#",
+    google: "https://g.page/r/tricraft-handyman/review",
   },
   founded: "2020",
-  yearsInBusiness: 5,
-} as const
+  yearsInBusiness: new Date().getFullYear() - 2020,
+}
 
 export interface Service {
   title: string
@@ -195,11 +195,11 @@ export const SERVICE_AREAS = [
 ] as const
 
 export const STATS = [
-  { value: 5, suffix: "+", label: "Years in Business" },
+  { value: new Date().getFullYear() - 2020, suffix: "+", label: "Years in Business" },
   { value: 500, suffix: "+", label: "Projects Completed" },
   { value: 3, suffix: "", label: "Trades Under One Roof" },
   { value: 100, suffix: "%", label: "Satisfaction Guaranteed" },
-] as const
+]
 
 export const FAQ_ITEMS = [
   {

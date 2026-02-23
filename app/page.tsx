@@ -3,7 +3,6 @@ import { Hero } from "@/components/sections/hero"
 import { Services } from "@/components/sections/services"
 import { About } from "@/components/sections/about"
 import { Gallery } from "@/components/sections/gallery"
-import { InstagramFeed } from "@/components/sections/instagram-feed"
 import { Reviews } from "@/components/sections/reviews"
 import { CtaBand } from "@/components/sections/cta-band"
 import { FAQ } from "@/components/sections/faq"
@@ -20,7 +19,6 @@ export default function Home() {
         <Services />
         <About />
         <Gallery />
-        <InstagramFeed />
         <CtaBand />
         <Reviews />
         <FAQ />

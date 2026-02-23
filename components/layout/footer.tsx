@@ -13,9 +13,9 @@ export function Footer() {
             <Image
               src="/images/logos/logo-white.png"
               alt="TriCraft Handyman Services"
-              width={200}
-              height={64}
-              className="h-16 w-auto mb-4"
+              width={400}
+              height={400}
+              className="h-32 w-auto mb-6"
             />
             <p className="text-white/60 text-sm leading-relaxed mb-6">
               Professional plumbing, electrical, and carpentry services for

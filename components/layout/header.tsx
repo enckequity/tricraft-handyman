@@ -3,7 +3,6 @@
 import { useEffect, useState } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { Menu, X, Phone } from "lucide-react"
-import Image from "next/image"
 import { COMPANY, NAV_LINKS } from "@/lib/constants"
 
 export function Header() {
@@ -37,29 +36,17 @@ export function Header() {
         }`}
       >
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex items-center justify-between">
-          <a href="#" className="flex items-center gap-3 shrink-0">
-            <div className="relative w-12 h-12 lg:w-14 lg:h-14 overflow-hidden shrink-0">
-              <Image
-                src={scrolled ? "/images/logos/logo-color.png" : "/images/logos/logo-white.png"}
-                alt=""
-                width={400}
-                height={400}
-                className="absolute top-[2%] left-1/2 -translate-x-1/2 w-[140%] max-w-none"
-                priority
-              />
-            </div>
-            <div className="flex flex-col leading-none">
-              <span className={`text-2xl lg:text-3xl font-bold tracking-tight font-[family-name:var(--font-heading)] transition-colors ${
-                scrolled ? "text-primary" : "text-white"
-              }`}>
-                TriCraft
-              </span>
-              <span className={`text-[10px] lg:text-xs font-bold tracking-[0.15em] uppercase mt-0.5 transition-colors ${
-                scrolled ? "text-text-muted" : "text-white/60"
-              }`}>
-                Handyman Services
-              </span>
-            </div>
+          <a href="#" className="flex flex-col leading-none shrink-0">
+            <span className={`text-2xl lg:text-3xl font-bold tracking-tight font-[family-name:var(--font-heading)] transition-colors ${
+              scrolled ? "text-primary" : "text-white"
+            }`}>
+              TriCraft
+            </span>
+            <span className={`text-[10px] lg:text-xs font-bold tracking-[0.15em] uppercase mt-0.5 transition-colors ${
+              scrolled ? "text-text-muted" : "text-white/60"
+            }`}>
+              Handyman Services
+            </span>
           </a>
 
           <nav className="hidden lg:flex items-center gap-8">
@@ -130,24 +117,13 @@ export function Header() {
           >
             <div className="flex flex-col h-full">
               <div className="flex items-center justify-between px-4 py-4 border-b border-border">
-                <div className="flex items-center gap-3">
-                  <div className="relative w-12 h-12 overflow-hidden shrink-0">
-                    <Image
-                      src="/images/logos/logo-color.png"
-                      alt=""
-                      width={400}
-                      height={400}
-                      className="absolute top-[2%] left-1/2 -translate-x-1/2 w-[140%] max-w-none"
-                    />
-                  </div>
-                  <div className="flex flex-col leading-none">
-                    <span className="text-2xl font-bold tracking-tight font-[family-name:var(--font-heading)] text-primary">
-                      TriCraft
-                    </span>
-                    <span className="text-[10px] font-bold tracking-[0.15em] uppercase mt-0.5 text-text-muted">
-                      Handyman Services
-                    </span>
-                  </div>
+                <div className="flex flex-col leading-none">
+                  <span className="text-2xl font-bold tracking-tight font-[family-name:var(--font-heading)] text-primary">
+                    TriCraft
+                  </span>
+                  <span className="text-[10px] font-bold tracking-[0.15em] uppercase mt-0.5 text-text-muted">
+                    Handyman Services
+                  </span>
                 </div>
                 <button
                   onClick={() => setMobileOpen(false)}

@@ -33,33 +33,19 @@ export function Header() {
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
           scrolled
             ? "bg-white/95 backdrop-blur-md shadow-sm py-2"
-            : "bg-primary-dark/80 backdrop-blur-sm py-3"
+            : "bg-primary-dark/80 backdrop-blur-sm py-2"
         }`}
       >
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex items-center justify-between">
-          <a href="#" className="flex items-center gap-3 shrink-0">
-            <div className="relative w-11 h-11 lg:w-14 lg:h-14 overflow-hidden rounded-lg shrink-0">
-              <Image
-                src={scrolled ? "/images/logos/logo-color.png" : "/images/logos/logo-white.png"}
-                alt=""
-                width={280}
-                height={280}
-                className="absolute top-0 left-1/2 -translate-x-1/2 w-[130%] h-auto"
-                priority
-              />
-            </div>
-            <div className="flex flex-col">
-              <span className={`text-lg lg:text-xl font-bold tracking-tight leading-tight font-[family-name:var(--font-heading)] transition-colors ${
-                scrolled ? "text-primary" : "text-white"
-              }`}>
-                TriCraft
-              </span>
-              <span className={`text-[10px] lg:text-xs font-semibold tracking-widest uppercase leading-tight transition-colors ${
-                scrolled ? "text-text-muted" : "text-white/60"
-              }`}>
-                Handyman Services
-              </span>
-            </div>
+          <a href="#" className="flex items-center shrink-0">
+            <Image
+              src={scrolled ? "/images/logos/logo-color.png" : "/images/logos/logo-white.png"}
+              alt="TriCraft Handyman Services"
+              width={400}
+              height={400}
+              className="h-16 w-auto sm:h-20 lg:h-24"
+              priority
+            />
           </a>
 
           <nav className="hidden lg:flex items-center gap-8">
@@ -130,25 +116,13 @@ export function Header() {
           >
             <div className="flex flex-col h-full">
               <div className="flex items-center justify-between px-4 py-4 border-b border-border">
-                <div className="flex items-center gap-3">
-                  <div className="relative w-12 h-12 overflow-hidden rounded-lg shrink-0">
-                    <Image
-                      src="/images/logos/logo-color.png"
-                      alt=""
-                      width={280}
-                      height={280}
-                      className="absolute top-0 left-1/2 -translate-x-1/2 w-[130%] h-auto"
-                    />
-                  </div>
-                  <div className="flex flex-col">
-                    <span className="text-xl font-bold tracking-tight leading-tight font-[family-name:var(--font-heading)] text-primary">
-                      TriCraft
-                    </span>
-                    <span className="text-[10px] font-semibold tracking-widest uppercase leading-tight text-text-muted">
-                      Handyman Services
-                    </span>
-                  </div>
-                </div>
+                <Image
+                  src="/images/logos/logo-color.png"
+                  alt="TriCraft Handyman Services"
+                  width={400}
+                  height={400}
+                  className="h-20 w-auto"
+                />
                 <button
                   onClick={() => setMobileOpen(false)}
                   className="p-2 rounded-lg text-text hover:bg-gray-100 transition-colors"

@@ -248,7 +248,7 @@ export const NAV_LINKS = [
   { label: "Services", href: "#services" },
   { label: "About", href: "#about" },
   { label: "Our Work", href: "#gallery" },
-  { label: "Testimonials", href: "#testimonials" },
+  { label: "Reviews", href: "#testimonials" },
   { label: "FAQ", href: "#faq" },
   { label: "Contact", href: "#contact" },
 ] as const

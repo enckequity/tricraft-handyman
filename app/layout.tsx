@@ -95,7 +95,7 @@ function StructuredData() {
       "Professional plumbing, electrical, and carpentry services for residential and light commercial properties in Ephrata, PA and Lancaster County.",
     url: "https://tricrafthandyman.com",
     telephone: "+1-717-799-9304",
-    email: "info@tricrafthandyman.com",
+    email: "tricraft.handyman@gmail.com",
     address: {
       "@type": "PostalAddress",
       addressLocality: "Ephrata",
@@ -118,18 +118,16 @@ function StructuredData() {
           "Thursday",
           "Friday",
         ],
-        opens: "07:00",
-        closes: "18:00",
-      },
-      {
-        "@type": "OpeningHoursSpecification",
-        dayOfWeek: "Saturday",
         opens: "08:00",
-        closes: "14:00",
+        closes: "18:00",
       },
     ],
     priceRange: "$$",
     image: "/images/logos/logo-color.png",
+    sameAs: [
+      "https://www.facebook.com/people/TriCraft-Handyman-Services-LLC/100083411621322/",
+      "https://www.instagram.com/tricraft_handyman_llc/",
+    ],
     areaServed: [
       "Ephrata, PA",
       "Lititz, PA",

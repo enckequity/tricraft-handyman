@@ -90,8 +90,8 @@ export function Hero() {
               Free Estimates
             </div>
             <div className="flex items-center gap-2">
-              <div className="w-2 h-2 rounded-full bg-green-400" />
-              Honest Pricing
+              <div className="w-2 h-2 rounded-full bg-red-400 animate-pulse" />
+              24/7 Emergency Plumbing
             </div>
           </motion.div>
         </div>

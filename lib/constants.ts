@@ -16,7 +16,7 @@ export const COMPANY = {
   tagline: "Carpentry \u00B7 Plumbing \u00B7 Electrical Contracting",
   phone: "(717) 799-9304",
   phoneHref: "tel:+17177999304",
-  email: "info@tricrafthandyman.com",
+  email: "tricraft.handyman@gmail.com",
   address: {
     street: "Ephrata",
     city: "Ephrata",
@@ -25,13 +25,13 @@ export const COMPANY = {
     full: "Ephrata, PA 17522",
   },
   hours: {
-    weekdays: "Mon\u2013Fri: 7:00 AM \u2013 6:00 PM",
-    saturday: "Sat: 8:00 AM \u2013 2:00 PM",
-    sunday: "Sun: Closed",
+    weekdays: "Mon\u2013Fri: 8:00 AM \u2013 6:00 PM",
+    saturday: "24/7 Emergency Plumbing",
+    sunday: "24/7 Emergency Plumbing",
   },
   social: {
-    facebook: "#",
-    instagram: "#",
+    facebook: "https://www.facebook.com/people/TriCraft-Handyman-Services-LLC/100083411621322/",
+    instagram: "https://www.instagram.com/tricraft_handyman_llc/",
     google: "#",
   },
   founded: "2020",

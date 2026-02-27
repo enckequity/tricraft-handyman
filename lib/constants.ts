@@ -33,8 +33,10 @@ export const COMPANY = {
     instagram: "https://www.instagram.com/tricraft_handyman_llc/",
     google: "https://g.page/r/tricraft-handyman/review",
   },
-  founded: "2020",
-  yearsInBusiness: new Date().getFullYear() - 2020,
+  license: "PA Home Improvement Contractor — HIPCA #T000697",
+  licenseShort: "HIPCA #T000697",
+  founded: "2016",
+  yearsInBusiness: new Date().getFullYear() - 2016,
 }
 
 export interface Service {
@@ -194,7 +196,7 @@ export const SERVICE_AREAS = [
 ] as const
 
 export const STATS = [
-  { value: new Date().getFullYear() - 2020, suffix: "+", label: "Years in Business" },
+  { value: new Date().getFullYear() - 2016, suffix: "+", label: "Years in Business" },
   { value: 500, suffix: "+", label: "Projects Completed" },
   { value: 3, suffix: "", label: "Trades Under One Roof" },
   { value: 100, suffix: "%", label: "Satisfaction Guaranteed" },

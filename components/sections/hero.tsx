@@ -9,8 +9,8 @@ export function Hero() {
   return (
     <section id="hero" className="relative min-h-screen flex items-center overflow-hidden">
       <Image
-        src="/images/work/IMG_7875.jpeg"
-        alt="Professional door installation by TriCraft Handyman Services in Ephrata PA"
+        src="/images/work/hero-front-door.png"
+        alt="Professional front door and entryway by TriCraft Handyman Services in Ephrata PA"
         fill
         className="object-cover object-center"
         priority
@@ -83,7 +83,7 @@ export function Hero() {
           >
             <div className="flex items-center gap-2">
               <div className="w-2 h-2 rounded-full bg-green-400" />
-              Licensed &amp; Insured
+              Licensed &amp; Insured (HIPCA #T000697)
             </div>
             <div className="flex items-center gap-2">
               <div className="w-2 h-2 rounded-full bg-green-400" />

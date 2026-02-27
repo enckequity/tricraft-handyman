@@ -111,7 +111,7 @@ export function Footer() {
             reserved.
           </p>
           <p className="text-sm text-white/40">
-            Licensed &amp; Insured &middot; Ephrata, PA
+            Licensed &amp; Insured &middot; Ephrata, PA &middot; HIPCA #T000697
           </p>
           <p className="text-sm text-white/30">
             Built by{" "}

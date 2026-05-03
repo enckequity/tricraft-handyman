@@ -33,8 +33,8 @@ export const COMPANY = {
     instagram: "https://www.instagram.com/tricraft_handyman_llc/",
     google: "https://g.page/r/tricraft-handyman/review",
   },
-  license: "PA Home Improvement Contractor — HIPCA #T000697",
-  licenseShort: "HIPCA #T000697",
+  license: "PA Home Improvement Contractor — PA 209786",
+  licenseShort: "PA 209786",
   founded: "2016",
   yearsInBusiness: new Date().getFullYear() - 2016,
 }
@@ -161,6 +161,16 @@ export const GALLERY_IMAGES: GalleryImage[] = [
     src: "/images/work/IMG_5114.jpeg",
     alt: "Bathroom flooring with wood plank tile and trim transition",
     category: "Flooring",
+  },
+  {
+    src: "/images/work/IMG_5724.jpeg",
+    alt: "Open-concept living room with luxury vinyl plank flooring, custom stair railing, and trim",
+    category: "Full Renovation",
+  },
+  {
+    src: "/images/work/IMG_6271.jpeg",
+    alt: "Bathroom remodel with marble-look tile wall and updated vanity",
+    category: "Full Renovation",
   },
 ]
 

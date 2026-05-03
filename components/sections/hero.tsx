@@ -83,7 +83,7 @@ export function Hero() {
           >
             <div className="flex items-center gap-2">
               <div className="w-2 h-2 rounded-full bg-green-400" />
-              Licensed &amp; Insured (HIPCA #T000697)
+              Licensed &amp; Insured (PA 209786)
             </div>
             <div className="flex items-center gap-2">
               <div className="w-2 h-2 rounded-full bg-green-400" />

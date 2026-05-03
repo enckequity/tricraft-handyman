@@ -7,7 +7,7 @@ import { COMPANY, SERVICES, SERVICE_AREAS } from "@/lib/constants"
 export function Footer() {
   return (
     <footer className="bg-primary-dark text-white">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
+      <div className="mx-auto max-w-7xl px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
           <div>
             <Image
@@ -105,7 +105,7 @@ export function Footer() {
       </div>
 
       <div className="border-t border-white/10">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8 py-6 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-sm text-white/40">
             &copy; {new Date().getFullYear()} {COMPANY.legalName}. All rights
             reserved.

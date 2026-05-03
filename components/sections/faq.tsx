@@ -14,7 +14,7 @@ export function FAQ() {
 
   return (
     <section id="faq" className="py-24 lg:py-32 bg-bg">
-      <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-3xl px-6 lg:px-8">
         <ScrollReveal className="text-center mb-16">
           <span className="text-sm font-semibold tracking-widest text-accent uppercase">
             FAQ

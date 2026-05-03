@@ -6,7 +6,7 @@ import { ScrollReveal } from "@/components/ui/scroll-reveal"
 export function Services() {
   return (
     <section id="services" className="py-24 lg:py-32 bg-white">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <ScrollReveal className="text-center mb-16">
           <span className="text-sm font-semibold tracking-widest text-accent uppercase">
             What We Do

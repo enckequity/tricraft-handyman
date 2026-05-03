@@ -16,7 +16,7 @@ const trustPoints = [
 export function About() {
   return (
     <section id="about" className="py-24 lg:py-32 bg-bg">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           <ScrollReveal direction="left">
             <div className="relative">

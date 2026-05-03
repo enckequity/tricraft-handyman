@@ -12,7 +12,7 @@ export function CtaBand() {
         <div className="absolute -bottom-20 -left-20 w-60 h-60 bg-white rounded-full blur-3xl" />
       </div>
 
-      <div className="relative mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center">
+      <div className="relative mx-auto max-w-4xl px-6 lg:px-8 text-center">
         <ScrollReveal>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight">
             Stop Letting Your To-Do List Pile Up

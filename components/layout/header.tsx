@@ -35,7 +35,7 @@ export function Header() {
             : "bg-primary-dark/80 backdrop-blur-sm py-2"
         }`}
       >
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex items-center justify-between">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8 flex items-center justify-between">
           <a href="#" className="flex flex-col leading-none shrink-0">
             <span className={`text-2xl lg:text-3xl font-bold tracking-tight font-[family-name:var(--font-heading)] transition-colors ${
               scrolled ? "text-primary" : "text-white"

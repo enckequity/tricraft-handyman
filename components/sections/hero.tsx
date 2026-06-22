@@ -9,8 +9,8 @@ export function Hero() {
   return (
     <section id="hero" className="relative min-h-screen flex items-center overflow-hidden">
       <Image
-        src="/images/work/hero-front-door.png"
-        alt="Professional front door and entryway by TriCraft Handyman Services in Ephrata PA"
+        src="/images/work/hero-tricraft-van.jpg"
+        alt="TriCraft Handyman Services work van parked outside a home in Lancaster County PA"
         fill
         className="object-cover object-center"
         priority

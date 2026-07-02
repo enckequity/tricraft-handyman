@@ -12,7 +12,7 @@ import {
 
 export const COMPANY = {
   name: "TriCraft Home & Commercial",
-  legalName: "TriCraft Handyman Services LLC",
+  legalName: "TriCraft Home and Commercial Services LLC",
   tagline: "Carpentry \u00B7 Plumbing \u00B7 Electrical Contracting",
   phone: "(717) 799-9304",
   phoneHref: "tel:+17177999304",
@@ -231,7 +231,7 @@ export const FAQ_ITEMS = [
   {
     question: "Are you licensed and insured in Pennsylvania?",
     answer:
-      "Yes. TriCraft Handyman Services LLC is fully licensed and insured to operate in Pennsylvania. We carry general liability insurance and workers\u2019 compensation coverage for your protection.",
+      "Yes. TriCraft Home and Commercial Services LLC is fully licensed and insured to operate in Pennsylvania. We carry general liability insurance and workers\u2019 compensation coverage for your protection.",
   },
   {
     question: "What areas do you serve near Ephrata and Lancaster?",

@@ -92,7 +92,7 @@ function StructuredData() {
     "@context": "https://schema.org",
     "@type": "HomeAndConstructionBusiness",
     name: "TriCraft Home & Commercial",
-    legalName: "TriCraft Handyman Services LLC",
+    legalName: "TriCraft Home and Commercial Services LLC",
     description:
       "Professional plumbing, electrical, and carpentry services for residential and commercial properties in Ephrata, PA and Lancaster County.",
     url: "https://tricrafthomeandcommercial.com",
@@ -169,7 +169,7 @@ function StructuredData() {
         name: "Are you licensed and insured in Pennsylvania?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Yes. TriCraft Handyman Services LLC is fully licensed and insured to operate in Pennsylvania with general liability and workers\u2019 compensation coverage.",
+          text: "Yes. TriCraft Home and Commercial Services LLC is fully licensed and insured to operate in Pennsylvania with general liability and workers\u2019 compensation coverage.",
         },
       },
       {

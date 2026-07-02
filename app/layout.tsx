@@ -17,28 +17,29 @@ const sourceSans = Source_Sans_3({
 })
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://tricrafthandyman.com"),
+  metadataBase: new URL("https://tricrafthomeandcommercial.com"),
   title:
-    "Handyman Services in Ephrata, PA | TriCraft Handyman \u2014 Plumbing, Electrical & Carpentry",
+    "Handyman Services in Ephrata, PA | TriCraft Home & Commercial \u2014 Plumbing, Electrical & Carpentry",
   description:
-    "Professional handyman services in Ephrata, PA. Plumbing, electrical, carpentry & more \u2014 one call covers it all. Licensed, insured, honest pricing. Free estimates. Serving all of Lancaster County.",
+    "Professional handyman services for homes and businesses in Ephrata, PA. Plumbing, electrical, carpentry & more \u2014 one call covers it all. Licensed, insured, honest pricing. Free estimates. Serving all of Lancaster County.",
   keywords: [
     "handyman Ephrata PA",
     "handyman services Lancaster County",
+    "commercial handyman Lancaster County",
     "plumber Ephrata PA",
     "electrician Ephrata PA",
     "carpenter Ephrata PA",
     "home repair Ephrata",
     "handyman near me",
-    "TriCraft Handyman Services",
+    "TriCraft Home & Commercial",
   ],
   openGraph: {
     title:
-      "TriCraft Handyman Services \u2014 Plumbing, Electrical & Carpentry in Ephrata, PA",
+      "TriCraft Home & Commercial \u2014 Plumbing, Electrical & Carpentry in Ephrata, PA",
     description:
-      "One call covers plumbing, electrical & carpentry. Professional handyman services for Ephrata and all of Lancaster County. Free estimates.",
-    url: "https://tricrafthandyman.com",
-    siteName: "TriCraft Handyman Services",
+      "One call covers plumbing, electrical & carpentry. Professional handyman services for homes and businesses in Ephrata and all of Lancaster County. Free estimates.",
+    url: "https://tricrafthomeandcommercial.com",
+    siteName: "TriCraft Home & Commercial",
     locale: "en_US",
     type: "website",
     images: [
@@ -46,19 +47,19 @@ export const metadata: Metadata = {
         url: "/images/work/IMG_7875.jpeg",
         width: 1200,
         height: 630,
-        alt: "TriCraft Handyman Services - Professional door installation in Ephrata PA",
+        alt: "TriCraft Home & Commercial - Professional door installation in Ephrata PA",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "TriCraft Handyman Services \u2014 Ephrata, PA",
+    title: "TriCraft Home & Commercial \u2014 Ephrata, PA",
     description:
-      "Plumbing, electrical & carpentry under one roof. Serving Ephrata and Lancaster County.",
+      "Plumbing, electrical & carpentry under one roof. Serving homes and businesses in Ephrata and Lancaster County.",
     images: ["/images/work/IMG_7875.jpeg"],
   },
   alternates: {
-    canonical: "https://tricrafthandyman.com",
+    canonical: "https://tricrafthomeandcommercial.com",
   },
   robots: {
     index: true,
@@ -90,10 +91,11 @@ function StructuredData() {
   const localBusiness = JSON.stringify({
     "@context": "https://schema.org",
     "@type": "HomeAndConstructionBusiness",
-    name: "TriCraft Handyman Services LLC",
+    name: "TriCraft Home & Commercial",
+    legalName: "TriCraft Handyman Services LLC",
     description:
-      "Professional plumbing, electrical, and carpentry services for residential and light commercial properties in Ephrata, PA and Lancaster County.",
-    url: "https://tricrafthandyman.com",
+      "Professional plumbing, electrical, and carpentry services for residential and commercial properties in Ephrata, PA and Lancaster County.",
+    url: "https://tricrafthomeandcommercial.com",
     telephone: "+1-717-799-9304",
     email: "tricraft.handyman@gmail.com",
     address: {

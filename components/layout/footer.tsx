@@ -12,14 +12,14 @@ export function Footer() {
           <div>
             <Image
               src="/images/logos/logo-white.png"
-              alt="TriCraft Handyman Services"
+              alt="TriCraft Home & Commercial"
               width={400}
               height={400}
               className="h-32 w-auto mb-6"
             />
             <p className="text-white/60 text-sm leading-relaxed mb-6">
               Professional plumbing, electrical, and carpentry services for
-              homeowners and businesses in Lancaster County, PA.
+              homes and businesses across Lancaster County, PA.
             </p>
             <div className="flex gap-3">
               <a

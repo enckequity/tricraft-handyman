@@ -45,7 +45,7 @@ export function Header() {
             <span className={`text-[10px] lg:text-xs font-bold tracking-[0.15em] uppercase mt-0.5 transition-colors ${
               scrolled ? "text-text-muted" : "text-white/60"
             }`}>
-              Handyman Services
+              Home & Commercial
             </span>
           </a>
 
@@ -122,7 +122,7 @@ export function Header() {
                     TriCraft
                   </span>
                   <span className="text-[10px] font-bold tracking-[0.15em] uppercase mt-0.5 text-text-muted">
-                    Handyman Services
+                    Home & Commercial
                   </span>
                 </div>
                 <button

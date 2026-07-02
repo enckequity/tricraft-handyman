@@ -10,7 +10,7 @@ export function Hero() {
     <section id="hero" className="relative min-h-screen flex items-center overflow-hidden">
       <Image
         src="/images/work/hero-tricraft-van.jpg"
-        alt="TriCraft Handyman Services work van parked outside a home in Lancaster County PA"
+        alt="TriCraft Home & Commercial work van parked outside a home in Lancaster County PA"
         fill
         className="object-cover object-center"
         priority

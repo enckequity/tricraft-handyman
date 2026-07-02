@@ -11,7 +11,7 @@ import {
 } from "lucide-react"
 
 export const COMPANY = {
-  name: "TriCraft Handyman Services",
+  name: "TriCraft Home & Commercial",
   legalName: "TriCraft Handyman Services LLC",
   tagline: "Carpentry \u00B7 Plumbing \u00B7 Electrical Contracting",
   phone: "(717) 799-9304",

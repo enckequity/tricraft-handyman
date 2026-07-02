@@ -41,13 +41,14 @@ export function About() {
               Why TriCraft
             </span>
             <h2 className="mt-3 text-3xl sm:text-4xl font-bold text-text tracking-tight">
-              Ephrata&apos;s Multi-Trade Handyman You Can Count On
+              Ephrata&apos;s Multi-Trade Home &amp; Commercial Contractor You Can Count On
             </h2>
             <p className="mt-4 text-text-muted leading-relaxed">
-              TriCraft Handyman Services was built on a simple idea: homeowners
-              shouldn&apos;t need to call three different contractors for one project.
-              Based in Ephrata, Pennsylvania, we bring professional-grade plumbing,
-              electrical, and carpentry skills to every job &mdash; big or small.
+              TriCraft Home &amp; Commercial was built on a simple idea: homeowners
+              and business owners shouldn&apos;t need to call three different contractors
+              for one project. Based in Ephrata, Pennsylvania, we bring
+              professional-grade plumbing, electrical, and carpentry skills to
+              every job &mdash; big or small.
             </p>
             <p className="mt-3 text-text-muted leading-relaxed">
               We&apos;re not a franchise and we&apos;re not a national chain. We&apos;re

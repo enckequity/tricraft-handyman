@@ -8,7 +8,7 @@ export default function NotFound() {
       <div className="text-center max-w-md">
         <Image
           src="/images/logos/logo-color.png"
-          alt="TriCraft Handyman Services"
+          alt="TriCraft Home & Commercial"
           width={180}
           height={64}
           className="mx-auto h-16 w-auto mb-8"
@@ -20,8 +20,8 @@ export default function NotFound() {
           Page Not Found
         </h2>
         <p className="text-text-muted mb-8 leading-relaxed">
-          This page doesn&apos;t exist &mdash; but we do! TriCraft Handyman
-          Services is here for all your plumbing, electrical, and carpentry
+          This page doesn&apos;t exist &mdash; but we do! TriCraft Home &amp;
+          Commercial is here for all your plumbing, electrical, and carpentry
           needs in Ephrata and Lancaster County.
         </p>
         <div className="flex flex-col sm:flex-row gap-3 justify-center">

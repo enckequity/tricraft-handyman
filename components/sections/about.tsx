@@ -37,10 +37,7 @@ export function About() {
           </ScrollReveal>
 
           <ScrollReveal direction="right">
-            <span className="text-sm font-semibold tracking-widest text-accent uppercase">
-              Why TriCraft
-            </span>
-            <h2 className="mt-3 text-3xl sm:text-4xl font-bold text-text tracking-tight">
+            <h2 className="text-3xl sm:text-4xl font-bold text-text tracking-tight">
               Ephrata&apos;s Multi-Trade Home &amp; Commercial Contractor You Can Count On
             </h2>
             <p className="mt-4 text-text-muted leading-relaxed">

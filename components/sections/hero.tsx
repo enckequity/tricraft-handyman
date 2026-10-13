@@ -20,16 +20,6 @@ export function Hero() {
 
       <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-8 w-full py-32">
         <div className="max-w-2xl">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, ease: "easeOut" }}
-          >
-            <span className="inline-flex items-center px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-white/90 text-sm font-medium mb-6">
-              Serving Ephrata &amp; All of Lancaster County
-            </span>
-          </motion.div>
-
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -49,7 +39,7 @@ export function Hero() {
             className="text-lg sm:text-xl text-white/85 leading-relaxed mb-8 max-w-xl"
           >
             One call. One contractor. One invoice. TriCraft handles the jobs most
-            handymen can&apos;t &mdash; from a leaky faucet to a full renovation, done
+            handymen can&apos;t, from a leaky faucet to a full renovation, done
             right the first time.
           </motion.p>
 
@@ -79,20 +69,11 @@ export function Hero() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.5, ease: "easeOut" }}
-            className="mt-10 flex items-center gap-6 text-white/70 text-sm"
+            className="mt-10 flex flex-wrap gap-x-6 gap-y-2 text-white/70 text-sm"
           >
-            <div className="flex items-center gap-2">
-              <div className="w-2 h-2 rounded-full bg-green-400" />
-              Licensed &amp; Insured (PA 209786)
-            </div>
-            <div className="flex items-center gap-2">
-              <div className="w-2 h-2 rounded-full bg-green-400" />
-              Free Estimates
-            </div>
-            <div className="flex items-center gap-2">
-              <div className="w-2 h-2 rounded-full bg-red-400 animate-pulse" />
-              24/7 Emergency Plumbing
-            </div>
+            <span>Licensed &amp; insured (PA 209786)</span>
+            <span>Serving all of Lancaster County</span>
+            <span>24/7 emergency plumbing</span>
           </motion.div>
         </div>
       </div>

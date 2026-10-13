@@ -1,6 +1,5 @@
 "use client"
 
-import { MapPin } from "lucide-react"
 import { SERVICE_AREAS } from "@/lib/constants"
 import { ScrollReveal } from "@/components/ui/scroll-reveal"
 
@@ -8,11 +7,8 @@ export function ServiceAreas() {
   return (
     <section className="py-24 lg:py-32 bg-white">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <ScrollReveal className="text-center mb-16">
-          <span className="text-sm font-semibold tracking-widest text-accent uppercase">
-            Service Areas
-          </span>
-          <h2 className="mt-3 text-3xl sm:text-4xl font-bold text-text tracking-tight">
+        <ScrollReveal className="text-center mb-10">
+          <h2 className="text-3xl sm:text-4xl font-bold text-text tracking-tight">
             Serving All of Lancaster County
           </h2>
           <p className="mt-4 text-lg text-text-muted max-w-2xl mx-auto">
@@ -23,24 +19,12 @@ export function ServiceAreas() {
         </ScrollReveal>
 
         <ScrollReveal>
-          <div className="flex flex-wrap justify-center gap-3">
-            {SERVICE_AREAS.map((area) => (
-              <span
-                key={area}
-                className="inline-flex items-center gap-1.5 px-4 py-2 bg-bg border border-border rounded-full text-sm font-medium text-text-muted transition-all duration-200 hover:border-primary/30 hover:text-primary hover:bg-primary/5"
-              >
-                <MapPin className="w-3.5 h-3.5" />
-                {area}, PA
-              </span>
-            ))}
-          </div>
-        </ScrollReveal>
-
-        <ScrollReveal className="mt-12 text-center">
-          <p className="text-text-muted text-sm">
-            Don&apos;t see your town listed? Give us a call &mdash; if you&apos;re
-            in Lancaster County or within 30 minutes of Ephrata, we likely serve
-            your area.
+          <p className="max-w-4xl mx-auto text-center text-text-muted leading-relaxed">
+            {SERVICE_AREAS.join(", ")}
+          </p>
+          <p className="mt-8 text-center text-text-muted text-sm">
+            Don&apos;t see your town? Call us. If you&apos;re in Lancaster County
+            or within 30 minutes of Ephrata, we likely serve your area.
           </p>
         </ScrollReveal>
       </div>

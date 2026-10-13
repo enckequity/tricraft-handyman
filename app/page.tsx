@@ -4,7 +4,6 @@ import { Services } from "@/components/sections/services"
 import { About } from "@/components/sections/about"
 import { Gallery } from "@/components/sections/gallery"
 import { Reviews } from "@/components/sections/reviews"
-import { CtaBand } from "@/components/sections/cta-band"
 import { FAQ } from "@/components/sections/faq"
 import { ServiceAreas } from "@/components/sections/service-areas"
 import { Contact } from "@/components/sections/contact"
@@ -19,7 +18,6 @@ export default function Home() {
         <Services />
         <About />
         <Gallery />
-        <CtaBand />
         <Reviews />
         <FAQ />
         <ServiceAreas />

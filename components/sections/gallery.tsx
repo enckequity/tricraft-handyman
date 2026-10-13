@@ -31,10 +31,7 @@ export function Gallery() {
     <section id="gallery" className="py-24 lg:py-32 bg-white">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <ScrollReveal className="text-center mb-16">
-          <span className="text-sm font-semibold tracking-widest text-accent uppercase">
-            Our Work
-          </span>
-          <h2 className="mt-3 text-3xl sm:text-4xl lg:text-5xl font-bold text-text tracking-tight">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-text tracking-tight">
             Real Projects. Real Results.
           </h2>
           <p className="mt-4 text-lg text-text-muted max-w-2xl mx-auto">

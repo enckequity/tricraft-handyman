@@ -16,10 +16,7 @@ export function FAQ() {
     <section id="faq" className="py-24 lg:py-32 bg-bg">
       <div className="mx-auto max-w-3xl px-6 lg:px-8">
         <ScrollReveal className="text-center mb-16">
-          <span className="text-sm font-semibold tracking-widest text-accent uppercase">
-            FAQ
-          </span>
-          <h2 className="mt-3 text-3xl sm:text-4xl font-bold text-text tracking-tight">
+          <h2 className="text-3xl sm:text-4xl font-bold text-text tracking-tight">
             Common Questions
           </h2>
           <p className="mt-4 text-lg text-text-muted">

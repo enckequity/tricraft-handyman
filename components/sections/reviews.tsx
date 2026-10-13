@@ -1,6 +1,6 @@
 "use client"
 
-import { Star, Facebook, MessageSquare } from "lucide-react"
+import { Star, Facebook } from "lucide-react"
 import { COMPANY } from "@/lib/constants"
 import { ScrollReveal } from "@/components/ui/scroll-reveal"
 
@@ -14,10 +14,7 @@ export function Reviews() {
 
       <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
         <ScrollReveal className="text-center mb-12">
-          <span className="text-sm font-semibold tracking-widest text-secondary uppercase">
-            Reviews
-          </span>
-          <h2 className="mt-3 text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight">
             Worked With Us? Let Us Know
           </h2>
           <p className="mt-4 text-lg text-white/70 max-w-2xl mx-auto">
@@ -29,7 +26,7 @@ export function Reviews() {
         <ScrollReveal>
           <div className="max-w-2xl mx-auto">
             <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 sm:p-12 text-center">
-              <div className="flex justify-center gap-1 mb-6">
+              <div className="flex justify-center gap-1 mb-8">
                 {Array.from({ length: 5 }).map((_, i) => (
                   <Star
                     key={i}
@@ -37,11 +34,6 @@ export function Reviews() {
                   />
                 ))}
               </div>
-
-              <p className="text-white/80 text-lg leading-relaxed mb-8">
-                Your honest feedback means the world to us. Leave a review on
-                Facebook or Google and help us grow.
-              </p>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
@@ -82,36 +74,6 @@ export function Reviews() {
               </div>
             </div>
 
-            <div className="mt-8 grid sm:grid-cols-2 gap-4">
-              <a
-                href={COMPANY.social.facebook}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group flex items-center gap-4 bg-white/5 border border-white/10 rounded-xl p-5 transition-all duration-300 hover:bg-white/10"
-              >
-                <div className="w-12 h-12 rounded-full bg-[#1877F2] flex items-center justify-center shrink-0">
-                  <Facebook className="w-6 h-6 text-white" />
-                </div>
-                <div>
-                  <p className="text-white font-semibold text-sm">Follow on Facebook</p>
-                  <p className="text-white/50 text-xs">Project updates & photos</p>
-                </div>
-              </a>
-              <a
-                href={COMPANY.social.instagram}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group flex items-center gap-4 bg-white/5 border border-white/10 rounded-xl p-5 transition-all duration-300 hover:bg-white/10"
-              >
-                <div className="w-12 h-12 rounded-full bg-gradient-to-br from-[#833AB4] via-[#FD1D1D] to-[#F77737] flex items-center justify-center shrink-0">
-                  <MessageSquare className="w-6 h-6 text-white" />
-                </div>
-                <div>
-                  <p className="text-white font-semibold text-sm">Follow on Instagram</p>
-                  <p className="text-white/50 text-xs">@tricraft_handyman_llc</p>
-                </div>
-              </a>
-            </div>
           </div>
         </ScrollReveal>
       </div>

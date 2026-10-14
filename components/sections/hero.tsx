@@ -1,11 +1,12 @@
 "use client"
 
-import { motion } from "framer-motion"
+import { motion, useReducedMotion } from "framer-motion"
 import { Phone, ArrowRight } from "lucide-react"
 import Image from "next/image"
 import { COMPANY } from "@/lib/constants"
 
 export function Hero() {
+  const reducedMotion = useReducedMotion()
   return (
     <section id="hero" className="relative min-h-screen flex items-center overflow-hidden">
       <Image
@@ -21,9 +22,9 @@ export function Hero() {
       <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-8 w-full py-32">
         <div className="max-w-2xl">
           <motion.h1
-            initial={{ opacity: 0, y: 20 }}
+            initial={reducedMotion ? false : { opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.1, ease: "easeOut" }}
+            transition={{ duration: reducedMotion ? 0 : 0.6, delay: reducedMotion ? 0 : 0.1, ease: "easeOut" }}
             className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-[1.1] tracking-tight mb-6"
           >
             Plumbing, Electrical &amp;{" "}
@@ -33,9 +34,9 @@ export function Hero() {
           </motion.h1>
 
           <motion.p
-            initial={{ opacity: 0, y: 20 }}
+            initial={reducedMotion ? false : { opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
+            transition={{ duration: reducedMotion ? 0 : 0.6, delay: reducedMotion ? 0 : 0.2, ease: "easeOut" }}
             className="text-lg sm:text-xl text-white/85 leading-relaxed mb-8 max-w-xl"
           >
             One call. One contractor. One invoice. TriCraft handles the jobs most
@@ -44,9 +45,9 @@ export function Hero() {
           </motion.p>
 
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={reducedMotion ? false : { opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.3, ease: "easeOut" }}
+            transition={{ duration: reducedMotion ? 0 : 0.6, delay: reducedMotion ? 0 : 0.3, ease: "easeOut" }}
             className="flex flex-col sm:flex-row gap-4"
           >
             <a
@@ -66,9 +67,9 @@ export function Hero() {
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0 }}
+            initial={reducedMotion ? false : { opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ duration: 0.6, delay: 0.5, ease: "easeOut" }}
+            transition={{ duration: reducedMotion ? 0 : 0.6, delay: reducedMotion ? 0 : 0.5, ease: "easeOut" }}
             className="mt-10 flex flex-wrap gap-x-6 gap-y-2 text-white/70 text-sm"
           >
             <span>Licensed &amp; insured (PA 209786)</span>

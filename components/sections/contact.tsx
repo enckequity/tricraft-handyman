@@ -10,9 +10,12 @@ const FORMSPREE_URL = "https://formspree.io/f/mvzbvbag"
 export function Contact() {
   const [submitted, setSubmitted] = useState(false)
   const [submitting, setSubmitting] = useState(false)
+  const [error, setError] = useState("")
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault()
+    if (submitting) return
+    setError("")
     setSubmitting(true)
 
     const form = e.currentTarget
@@ -27,9 +30,11 @@ export function Contact() {
       if (res.ok) {
         setSubmitted(true)
         form.reset()
+      } else {
+        setError("Your request could not be sent. Your details are still here. Please try again, or call or email us.")
       }
     } catch {
-      window.location.href = `mailto:${COMPANY.email}?subject=Estimate Request`
+      setError("We could not confirm that your request was sent. Your details are still here. Check your connection, then try again, or call or email us.")
     } finally {
       setSubmitting(false)
     }
@@ -48,7 +53,7 @@ export function Contact() {
           </p>
         </ScrollReveal>
 
-        <div className="grid lg:grid-cols-2 gap-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           <ScrollReveal direction="left">
             <div className="space-y-6">
               <a
@@ -79,7 +84,7 @@ export function Contact() {
                 </div>
                 <div>
                   <h3 className="font-semibold text-text">Email Us</h3>
-                  <p className="text-primary font-semibold mt-1">
+                  <p className="text-primary font-semibold mt-1 break-all">
                     {COMPANY.email}
                   </p>
                   <p className="text-text-muted text-sm mt-1">
@@ -129,7 +134,7 @@ export function Contact() {
               </p>
 
               {submitted ? (
-                <div className="flex-1 flex flex-col items-center justify-center text-center py-8">
+                <div role="status" className="flex-1 flex flex-col items-center justify-center text-center py-8">
                   <CheckCircle2 className="w-16 h-16 text-green-500 mb-4" />
                   <h4 className="text-xl font-bold text-text mb-2">
                     Request Sent!
@@ -149,9 +154,10 @@ export function Contact() {
               ) : (
                 <form
                   onSubmit={handleSubmit}
+                  aria-busy={submitting}
                   className="space-y-4 flex-1 flex flex-col"
                 >
-                  <div className="grid sm:grid-cols-2 gap-4">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
                       <label
                         htmlFor="name"
@@ -223,6 +229,11 @@ export function Contact() {
                       placeholder="Describe what you need done..."
                     />
                   </div>
+                  {error && (
+                    <p role="alert" className="text-sm text-red-700">
+                      {error}
+                    </p>
+                  )}
                   <button
                     type="submit"
                     disabled={submitting}

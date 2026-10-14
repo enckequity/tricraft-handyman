@@ -1,4 +1,4 @@
-import { chromium } from '@playwright/test'
+import { chromium, expect } from '@playwright/test'
 import assert from 'node:assert/strict'
 
 const origin = process.env.TRICRAFT_ORIGIN || 'http://127.0.0.1:5317'
@@ -12,13 +12,26 @@ try {
   let mode = 'failure', calls = 0, release
   await page.route('https://formspree.io/**', async route => {
     assert.equal(route.request().method(), 'POST')
-    assert.ok(route.request().postData().includes('Synthetic reviewer'))
+    const fields = Object.fromEntries([...route.request().postData().matchAll(/name="([^"]+)"\r\n\r\n([\s\S]*?)\r\n(?=--)/g)].map(match => [match[1], match[2]]))
+    assert.deepEqual(fields, {
+      name: 'Synthetic reviewer', phone: '7175550100', service: 'plumbing',
+      message: 'Synthetic offline fixture, no provider delivery.'
+    })
     calls++
     if (mode === 'pending') await new Promise(resolve => { release = resolve })
     if (mode === 'network') return route.abort('failed')
     return route.fulfill({ status: mode === 'failure' ? 422 : 200, contentType: 'application/json', body: '{}' })
   })
   await page.goto(origin, { waitUntil: 'networkidle' })
+  if (!readOnly) {
+    const counters = page.locator('#about .text-4xl > span')
+    const values = [`${new Date().getFullYear() - 2016}+`, '500+', '3', '100%']
+    await expect(counters).toHaveCount(values.length)
+    for (let index = 0; index < values.length; index++) {
+      await counters.nth(index).scrollIntoViewIfNeeded()
+      await expect(counters.nth(index)).toHaveText(values[index], { timeout: 500 })
+    }
+  }
   for (const id of ['services', 'about', 'gallery', 'faq', 'contact']) {
     await page.locator(`#${id}`).scrollIntoViewIfNeeded()
     assert.ok(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), `${id} overflows`)
@@ -74,6 +87,9 @@ try {
   const notFound = await page.goto(`${origin}/missing-customer-fixture`)
   assert.equal(notFound.status(), 404)
   assert.ok(await page.getByRole('heading', { name: /404|not found/i }).count())
+  await page.getByRole('link', { name: 'Back to Home' }).click()
+  await page.waitForURL(`${origin}/`)
+  await page.locator('#hero h1').waitFor()
   assert.deepEqual(errors, [])
   console.log(JSON.stringify({ origin, readOnly, width, reducedMotion: true, fixtureRequests: calls, providerDeliveries: 0, result: 'passed' }))
 } finally {

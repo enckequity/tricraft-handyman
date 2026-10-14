@@ -1,17 +1,23 @@
 "use client"
 
-import { useState } from "react"
+import { useEffect, useRef, useState } from "react"
 import Image from "next/image"
 import { X, ChevronLeft, ChevronRight } from "lucide-react"
-import { motion, AnimatePresence } from "framer-motion"
 import { GALLERY_IMAGES } from "@/lib/constants"
 import { ScrollReveal } from "@/components/ui/scroll-reveal"
 
 export function Gallery() {
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null)
+  const dialogRef = useRef<HTMLDialogElement>(null)
+  useEffect(() => {
+    if (lightboxIndex !== null && !dialogRef.current?.open) dialogRef.current?.showModal()
+  }, [lightboxIndex])
 
   const openLightbox = (index: number) => setLightboxIndex(index)
-  const closeLightbox = () => setLightboxIndex(null)
+  const closeLightbox = () => {
+    dialogRef.current?.close()
+    setLightboxIndex(null)
+  }
 
   const goNext = () => {
     if (lightboxIndex !== null) {
@@ -79,14 +85,12 @@ export function Gallery() {
         </div>
       </div>
 
-      <AnimatePresence>
         {lightboxIndex !== null && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.2 }}
-            className="fixed inset-0 z-[70] bg-black/90 backdrop-blur-sm flex items-center justify-center"
+          <dialog
+            ref={dialogRef}
+            aria-label="Project photos"
+            onCancel={(event) => { event.preventDefault(); closeLightbox() }}
+            className="fixed inset-0 m-0 w-full h-full max-w-none max-h-none border-0 z-[70] bg-black/90 backdrop-blur-sm flex items-center justify-center"
             onClick={closeLightbox}
           >
             <button
@@ -140,9 +144,8 @@ export function Gallery() {
                 {lightboxIndex + 1} of {GALLERY_IMAGES.length}
               </p>
             </div>
-          </motion.div>
+          </dialog>
         )}
-      </AnimatePresence>
     </section>
   )
 }

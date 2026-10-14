@@ -1,4 +1,5 @@
 import Image from "next/image"
+import Link from "next/link"
 import { Phone, ArrowLeft } from "lucide-react"
 import { COMPANY } from "@/lib/constants"
 
@@ -25,13 +26,13 @@ export default function NotFound() {
           needs in Ephrata and Lancaster County.
         </p>
         <div className="flex flex-col sm:flex-row gap-3 justify-center">
-          <a
+          <Link
             href="/"
             className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-primary text-white font-semibold rounded-lg transition-all duration-200 hover:scale-[1.02] hover:shadow-lg active:scale-[0.98]"
           >
             <ArrowLeft className="w-4 h-4" />
             Back to Home
-          </a>
+          </Link>
           <a
             href={COMPANY.phoneHref}
             className="inline-flex items-center justify-center gap-2 px-6 py-3 border-2 border-primary text-primary font-semibold rounded-lg transition-all duration-200 hover:bg-primary hover:text-white active:scale-[0.98]"

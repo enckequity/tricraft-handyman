@@ -1,13 +1,17 @@
 "use client"
 
-import { useEffect, useState } from "react"
-import { motion, AnimatePresence } from "framer-motion"
+import { useEffect, useRef, useState } from "react"
 import { Menu, X, Phone } from "lucide-react"
 import { COMPANY, NAV_LINKS } from "@/lib/constants"
 
 export function Header() {
   const [scrolled, setScrolled] = useState(false)
   const [mobileOpen, setMobileOpen] = useState(false)
+  const menuRef = useRef<HTMLDialogElement>(null)
+  const closeMenu = () => {
+    menuRef.current?.close()
+    setMobileOpen(false)
+  }
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 50)
@@ -17,6 +21,7 @@ export function Header() {
 
   useEffect(() => {
     if (mobileOpen) {
+      menuRef.current?.showModal()
       document.body.style.overflow = "hidden"
     } else {
       document.body.style.overflow = ""
@@ -86,6 +91,7 @@ export function Header() {
           <div className="flex lg:hidden items-center gap-3">
             <a
               href={COMPANY.phoneHref}
+              aria-label={`Call ${COMPANY.phone}`}
               className={`flex items-center gap-1.5 text-sm font-semibold ${
                 scrolled ? "text-primary" : "text-white"
               }`}
@@ -106,14 +112,12 @@ export function Header() {
         </div>
       </header>
 
-      <AnimatePresence>
         {mobileOpen && (
-          <motion.div
-            initial={{ opacity: 0, x: "100%" }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: "100%" }}
-            transition={{ type: "tween", duration: 0.3 }}
-            className="fixed inset-0 z-[60] bg-white"
+          <dialog
+            ref={menuRef}
+            aria-label="Site menu"
+            onCancel={(event) => { event.preventDefault(); closeMenu() }}
+            className="fixed inset-0 m-0 w-full h-full max-w-none max-h-none border-0 z-[60] bg-white"
           >
             <div className="flex flex-col h-full">
               <div className="flex items-center justify-between px-4 py-4 border-b border-border">
@@ -126,7 +130,7 @@ export function Header() {
                   </span>
                 </div>
                 <button
-                  onClick={() => setMobileOpen(false)}
+                  onClick={closeMenu}
                   className="p-2 rounded-lg text-text hover:bg-gray-100 transition-colors"
                   aria-label="Close menu"
                 >
@@ -139,7 +143,7 @@ export function Header() {
                   <a
                     key={link.href}
                     href={link.href}
-                    onClick={() => setMobileOpen(false)}
+                    onClick={closeMenu}
                     className="text-lg font-medium text-text py-3 px-4 rounded-lg hover:bg-bg-alt transition-colors"
                   >
                     {link.label}
@@ -157,16 +161,15 @@ export function Header() {
                 </a>
                 <a
                   href="#contact"
-                  onClick={() => setMobileOpen(false)}
+                  onClick={closeMenu}
                   className="flex items-center justify-center w-full py-3.5 bg-accent text-white text-lg font-semibold rounded-lg transition-all duration-200 hover:shadow-lg active:scale-[0.98]"
                 >
                   Get a Free Estimate
                 </a>
               </div>
             </div>
-          </motion.div>
+          </dialog>
         )}
-      </AnimatePresence>
     </>
   )
 }
